@@ -7,27 +7,28 @@ public class JudgeRouteCircle {
     public static void main(String[] args) {
         String input1 = "UD";
         String input2 = "LL";
-        assert judgeCircle(input1);
-        assert !judgeCircle(input2);
+
+        System.out.println(judgeCircle(input1));
+        System.out.println(judgeCircle(input2));
 
     }
 
 
-    public static boolean judgeCircle(String moves) {
+    private static boolean judgeCircle(String moves) {
         char[] chars = moves.toCharArray();
         int[] point = new int[]{0, 0};
         for (char c : chars) {
-            switch (String.valueOf(c)) {
-                case "R":
+            switch (c) {
+                case 'R':
                     point[0]++;
                     break;
-                case "L":
+                case 'L':
                     point[0]--;
                     break;
-                case "U":
+                case 'U':
                     point[1]++;
                     break;
-                case "D":
+                case 'D':
                     point[1]--;
                     break;
             }
