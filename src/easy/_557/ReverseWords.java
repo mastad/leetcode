@@ -1,4 +1,4 @@
-package _557;
+package easy._557;
 
 /**
  * Created by reiserx on 2017/11/26.

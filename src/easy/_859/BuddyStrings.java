@@ -1,4 +1,4 @@
-package _859;
+package easy._859;
 
 import java.util.ArrayList;
 import java.util.HashSet;
