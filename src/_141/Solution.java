@@ -1,9 +1,9 @@
-package easy._141;
+package _141;
 
 import util.ListNode;
 
 public class Solution {
-    
+
     public  boolean hasCycle(ListNode list) {
         if (list == null) return false;
 

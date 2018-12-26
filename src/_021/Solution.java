@@ -1,4 +1,4 @@
-package easy._021;
+package _021;
 
 import util.ListNode;
 

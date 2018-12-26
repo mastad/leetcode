@@ -1,4 +1,4 @@
-package easy._020;
+package _020;
 
 import java.util.Stack;
 

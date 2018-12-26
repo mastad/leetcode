@@ -1,4 +1,4 @@
-package medium._019;
+package _019;
 
 import util.ListNode;
 
