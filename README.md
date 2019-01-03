@@ -28,6 +28,7 @@ leetcode problems的Java解法
 
 | # | Title | Tag |
 | --- | --- | --- |
+| 2 | Add Two Numbers| List |
 | 19 | Two Sum | List |
 
 

@@ -16,7 +16,7 @@
 ```ListNode head```是一个单向链表,我们需要生成一个新的链表 ```ListNode pre```，在 ``` head ``` 遍历的过程中将值反向插入到```pre```。这里面有一点需要注意，一定需要一个临时的链表去缓存 ```head``` 的next。
 
 代码：
-```java
+``` java
 
     public  ListNode reverseList(ListNode head) {
         ListNode pre = null;

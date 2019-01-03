@@ -21,7 +21,8 @@
 
 代码：
 
-```java
+``` java
+    public  boolean hasCycle(ListNode list) {
         if (list == null) return false;
 
         ListNode fast = list.next;
@@ -35,6 +36,7 @@
         }
 
         return false;
+    }
 ```
 
 
