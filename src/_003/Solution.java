@@ -1,22 +1,24 @@
 package _003;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
 
     public int lengthOfLongestSubstring(String s) {
-        if (s == null || s.length() == 0) {
-            return 0;
+        int n = s.length();
+        Set<Character> set = new HashSet<>();
+        int ans = 0, i = 0, j = 0;
+        while (i < n && j < n) {
+            if (!set.contains(s.charAt(j))){
+                set.add(s.charAt(j++));
+                ans = Math.max(ans, j - i);
+            }
+            else {
+                set.remove(s.charAt(i++));
+            }
         }
-        char[] chars = s.toCharArray();
-        Map<String, Integer> tmp = new HashMap<>();
-        for (int i = 0; i < chars.length; i++) {
-            tmp.put(String.valueOf(chars[i]),i);
-        }
-
-        System.out.println(tmp);
-        return tmp.size();
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -24,5 +26,9 @@ public class Solution {
         System.out.println(solution.lengthOfLongestSubstring("abcabcbb"));
         System.out.println(solution.lengthOfLongestSubstring("bbbbb"));
         System.out.println(solution.lengthOfLongestSubstring("pwwkew"));
+        System.out.println(solution.lengthOfLongestSubstring("abcde"));
+        System.out.println(solution.lengthOfLongestSubstring(""));
+        System.out.println(solution.lengthOfLongestSubstring("aab"));
+        System.out.println(solution.lengthOfLongestSubstring("dvdf"));
     }
 }
