@@ -1,8 +1,5 @@
 package _007;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Author: reiserx
  * Date:2019/1/11
@@ -18,24 +15,11 @@ public class Solution {
         } else if (x == 0) {
             return x;
         }
-        List<Integer> container = new ArrayList<>();
-
-        container.add(1);
-        container.add(2);
-        container.add(3);
-        container.add(4);
-        container.add(2);
-        container.add(3);
-        container.add(6);
-        container.add(4);
-        container.add(6);
-        container.add(9);
-
-
+        char[] container = String.valueOf(x).toCharArray();
         int result = 0;
-        for (int i = container.size() - 1; i > -1; i--) {
+        for (int i = container.length - 1; i > -1; i--) {
             int t = (int) Math.pow(10, i);
-            int r = container.get(i) * t;
+            int r = Integer.valueOf(String.valueOf(container[i])) * t;
             result += r;
         }
         return negative ? -result : result;
@@ -43,9 +27,11 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.reverse(123));
-        System.out.println(solution.reverse(-123));
-        System.out.println(solution.reverse(1534236469));
-        System.out.println(solution.reverse(2147483647));
+//        System.out.println(solution.reverse(123));
+//        System.out.println(solution.reverse(-123));
+//        System.out.println(solution.reverse(153423646));
+//        System.out.println(solution.reverse(1534236469));
+        System.out.println(9000000000);
+//        System.out.println(solution.reverse(2147483647));
     }
 }
