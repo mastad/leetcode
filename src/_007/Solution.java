@@ -31,7 +31,7 @@ public class Solution {
 //        System.out.println(solution.reverse(-123));
 //        System.out.println(solution.reverse(153423646));
 //        System.out.println(solution.reverse(1534236469));
-        System.out.println(9000000000);
+        System.out.println(9*1000000000);
 //        System.out.println(solution.reverse(2147483647));
     }
 }
