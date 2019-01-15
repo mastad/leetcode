@@ -32,10 +32,44 @@ public class Solution {
 
     }
 
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
+        if (head == null || n == 0) {
+            return null;
+        }
+        ListNode del = head;
+        ListNode end = head;
+        for (int i = 0; i < n - 1; ++i) {
+            if (end.next != null) {
+                end = end.next;
+            } else {
+                return null;
+            }
+
+        }
+
+        ListNode tmp = del;
+        while (end.next != null) {
+            end = end.next;
+            tmp = del;
+            del = del.next;
+        }
+
+        if (del == head) {
+            head = head.next;
+        } else {
+            tmp.next = del.next;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         ListNode.print(solution.removeNthFromEnd(ListNode.createTestData("[1,2,3,4,5]"), 2));
         ListNode.print(solution.removeNthFromEnd(ListNode.createTestData("[1]"), 1));
+        ListNode.print(solution.removeNthFromEnd(ListNode.createTestData("[1,2]"), 2));
+        ListNode.print(solution.removeNthFromEnd2(ListNode.createTestData("[1,2,3,4,5]"), 2));
+        ListNode.print(solution.removeNthFromEnd2(ListNode.createTestData("[1]"), 1));
+        ListNode.print(solution.removeNthFromEnd2(ListNode.createTestData("[1,2]"), 2));
 
     }
 
