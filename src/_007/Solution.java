@@ -8,30 +8,32 @@ package _007;
 public class Solution {
 
     public int reverse(int x) {
-        boolean negative = false;
-        if (x < 0) {
-            negative = true;
-            x = -x;
-        } else if (x == 0) {
-            return x;
+        int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            //边界：【-2147483648,2147483647]
+            if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+            if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+            rev = rev * 10 + pop;
         }
-        char[] container = String.valueOf(x).toCharArray();
-        int result = 0;
-        for (int i = container.length - 1; i > -1; i--) {
-            int t = (int) Math.pow(10, i);
-            int r = Integer.valueOf(String.valueOf(container[i])) * t;
-            result += r;
-        }
-        return negative ? -result : result;
+        return rev;
     }
 
+    /**
+     * [−231,  231 − 1].
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Solution solution = new Solution();
-//        System.out.println(solution.reverse(123));
-//        System.out.println(solution.reverse(-123));
+        System.out.println(solution.reverse(123));
+        System.out.println(solution.reverse(-123));
 //        System.out.println(solution.reverse(153423646));
 //        System.out.println(solution.reverse(1534236469));
-        System.out.println(9*1000000000);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Integer.MAX_VALUE / 10);
 //        System.out.println(solution.reverse(2147483647));
     }
 }
