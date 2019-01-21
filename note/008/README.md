@@ -1,15 +1,34 @@
-package _008;
+[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
 
-/**
- * Author: reiserx
- * Date:2019/1/20
- * Des:
- */
-public class Solution {
+**题目**
 
+转化字符串为数字，字符串中不仅有数字还有字母和空格。
 
-    //考虑负数
-    public int myAtoi(String str) {
+例子:
+
+>Input: "42"
+>Output: 42
+
+>Input: "   -42"
+>Output: -42
+
+>Input: "4193 with words"
+>Output: 4193
+
+>Input: "words and 987"
+>Output: 0
+
+>Input: "-91283472332"
+>Output: -2147483648
+
+**思路**
+
+本题考察的重点是代码的鲁棒性，对特殊情况的处理，如包含空格、首字母为```+/— ```、包含字母。当然处理整型时一定要考虑整型的取值范围。读题是关键
+
+代码:
+
+``` java
+public int myAtoi(String str) {
 
 
         int digit = 1;
@@ -22,7 +41,7 @@ public class Solution {
 
 
         char[] chars = str.toCharArray();
-
+      
         while (i < str.length() && chars[i] == ' ') {
             i++;
         }
@@ -58,17 +77,7 @@ public class Solution {
         }
         return total * digit;
     }
+```
 
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.myAtoi("42"));
-        System.out.println(solution.myAtoi("4193 with words"));
-        System.out.println(solution.myAtoi("-91283472332"));
-        System.out.println(solution.myAtoi("   -42"));
-        System.out.println(solution.myAtoi("words and 987"));
-        System.out.println(solution.myAtoi(" "));
-        System.out.println(solution.myAtoi("3.14159"));
 
-    }
-}
