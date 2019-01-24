@@ -6,15 +6,9 @@ import java.util.*;
  * Created by reiserx on 2017/12/8.
  * 三和为零
  */
-public class ThreeSum {
-    public static void main(String[] args) {
-        int[] s = new int[]{0,0,0,0};
-        List<List<Integer>> result = threeSum(s);
-        System.out.println(result.size());
-    }
+public class Solution {
 
-
-    private static List<List<Integer>> threeSum(int[] nums) {
+    private List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Integer lastOne = -65535;
         Integer lastTwo = -65535;
@@ -22,17 +16,17 @@ public class ThreeSum {
         for (int i = 0; i < nums.length - 2; i++) {
             int one = nums[i];
             //去重
-            if(one==lastOne){
+            if (one == lastOne) {
                 continue;
             }
-            lastOne=-65535;
+            lastOne = -65535;
             for (int j = i + 1; j < nums.length - 1; j++) {
                 int two = nums[j];
                 //去重
-                if(two==lastTwo){
+                if (two == lastTwo) {
                     continue;
                 }
-                lastTwo=-65535;
+                lastTwo = -65535;
                 //二分查找
                 int threeIndex = -1;
                 int start = j + 1;
@@ -58,14 +52,21 @@ public class ThreeSum {
                         r.add(two);
                         r.add(three);
                         result.add(r);
-                        lastOne=one;
-                        lastTwo=two;
+                        lastOne = one;
+                        lastTwo = two;
                     }
                 }
             }
 
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] s = new int[]{0, 0, 0, 0};
+        List<List<Integer>> result = solution.threeSum(s);
+        System.out.println(result.size());
     }
 
 }

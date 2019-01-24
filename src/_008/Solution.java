@@ -7,7 +7,6 @@ package _008;
  */
 public class Solution {
 
-
     //考虑负数
     public int myAtoi(String str) {
 
@@ -58,7 +57,6 @@ public class Solution {
         }
         return total * digit;
     }
-
 
     public static void main(String[] args) {
         Solution solution = new Solution();

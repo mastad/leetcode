@@ -4,12 +4,9 @@ package _013;
  * Created by reiserx on 2017/12/6.
  * 罗马转整数
  */
-public class RomanToInt {
-    public static void main(String[] args) {
-        System.out.println("" + romanToInt("DCXXI"));
-    }
+public class Solution {
 
-    private static int romanToInt(String s) {
+    private int romanToInt(String s) {
         int num[] = new int[s.length()];
 
         for (int i = 0; i < s.length(); i++) {
@@ -47,5 +44,10 @@ public class RomanToInt {
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.romanToInt("DCXXI"));
     }
 }

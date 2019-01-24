@@ -3,15 +3,9 @@ package _026;
 /**
  * Created by reiserx on 2018/5/3.
  */
-public class RemoveDuplicate {
+public class Solution {
 
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 3,2,1};
-        System.out.printf(removeDuplicates(nums) + "");
-    }
-
-
-    public static int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {
         int max = nums[nums.length - 1];
         int index = 0;
         int less = nums[0];
@@ -37,6 +31,11 @@ public class RemoveDuplicate {
         return index + 1;
     }
 
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] nums = {1, 2, 3, 2, 1};
+        System.out.printf(solution.removeDuplicates(nums) + "");
+    }
 }
 
 

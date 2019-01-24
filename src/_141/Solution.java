@@ -4,7 +4,7 @@ import util.ListNode;
 
 public class Solution {
 
-    public  boolean hasCycle(ListNode list) {
+    public boolean hasCycle(ListNode list) {
         if (list == null) return false;
 
         ListNode fast = list.next;
@@ -20,9 +20,8 @@ public class Solution {
         return false;
     }
 
-
     public static void main(String[] args) {
-        Solution  solution=new Solution();
+        Solution solution = new Solution();
         System.out.println(solution.hasCycle(ListNode.createTestData("[3,1,0,4]")));
     }
 

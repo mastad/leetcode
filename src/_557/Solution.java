@@ -3,21 +3,9 @@ package _557;
 /**
  * Created by reiserx on 2017/11/26.
  */
-public class ReverseWords {
+public class Solution {
 
-    public static void main(String[] args) {
-        String input = "Let's take LeetCode contest";
-        String output = "s'teL ekat edoCteeL tsetnoc";
-
-        String out = reverseWords(input);
-        System.out.println(out);
-        System.out.println(out.equals(output));
-
-
-    }
-
-
-    private static String reverseWords(String s) {
+    private String reverseWords(String s) {
         String space = " ";
         String[] inpputArray = s.split(space);
         StringBuilder outputSb = new StringBuilder();
@@ -33,6 +21,19 @@ public class ReverseWords {
             }
         }
         return outputSb.toString();
+
+    }
+
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String input = "Let's take LeetCode contest";
+        String output = "s'teL ekat edoCteeL tsetnoc";
+
+        String out = solution.reverseWords(input);
+        System.out.println(out);
+        System.out.println(out.equals(output));
+
 
     }
 

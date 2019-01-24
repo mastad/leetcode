@@ -3,18 +3,9 @@ package _657;
 /**
  * Created by reiserx on 2017/11/24.
  */
-public class JudgeRouteCircle {
-    public static void main(String[] args) {
-        String input1 = "UD";
-        String input2 = "LL";
+public class Solution {
 
-        System.out.println(judgeCircle(input1));
-        System.out.println(judgeCircle(input2));
-
-    }
-
-
-    private static boolean judgeCircle(String moves) {
+    private  boolean judgeCircle(String moves) {
         char[] chars = moves.toCharArray();
         int[] point = new int[]{0, 0};
         for (char c : chars) {
@@ -34,5 +25,15 @@ public class JudgeRouteCircle {
             }
         }
         return point[0] == 0 && point[1] == 0;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String input1 = "UD";
+        String input2 = "LL";
+
+        System.out.println(solution.judgeCircle(input1));
+        System.out.println(solution.judgeCircle(input2));
+
     }
 }

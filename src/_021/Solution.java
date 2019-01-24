@@ -3,6 +3,7 @@ package _021;
 import util.ListNode;
 
 public class Solution {
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
         ListNode watcher = new ListNode(0);

@@ -8,16 +8,9 @@ import java.util.Set;
 /**
  * Created by reiserx on 2018/7/9.
  */
-public class BuddyStrings {
+public class Solution {
 
-    public static void main(String[] args) {
-
-        System.out.println(buddyStrings("abbbccb", "cbbbabc"));
-        System.out.println(buddyStrings("abab", "abab"));
-
-    }
-
-    public static boolean buddyStrings(String A, String B) {
+    public boolean buddyStrings(String A, String B) {
 
         int length = A.length();
 
@@ -48,5 +41,12 @@ public class BuddyStrings {
             }
         }
         return dif.size() == 2 && a[dif.get(0)] == b[dif.get(1)] && a[dif.get(1)] == b[dif.get(0)];
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.buddyStrings("abbbccb", "cbbbabc"));
+        System.out.println(solution.buddyStrings("abab", "abab"));
+
     }
 }

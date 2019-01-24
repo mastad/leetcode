@@ -5,7 +5,7 @@ import util.ListNode;
 
 public class Solution {
 
-    public  ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode current = head;
         while (current != null) {
@@ -17,12 +17,9 @@ public class Solution {
         return pre;
     }
 
-
-
     public static void main(String[] args) {
-        Solution solution=new Solution();
-        ListNode.print(solution.reverseList( ListNode.createTestData("[3,2,0,-1]")));
+        Solution solution = new Solution();
+        ListNode.print(solution.reverseList(ListNode.createTestData("[3,2,0,-1]")));
     }
-
 
 }
