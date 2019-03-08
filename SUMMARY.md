@@ -9,7 +9,7 @@
 * [Linkedlist]()
    * [Add Two Numbers(NO.2)](note/002/README.md)
    * [Linked List Cycle(NO.141)](note/141/README.md)
-   * [Palindrome Linked List(NO.234)(note/017/234.md)
+   * [Palindrome Linked List(NO.234)](note/017/234.md)
 * [Array]()
    * [Two Sum(NO.1)](note/001/README.md)
  
