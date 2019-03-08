@@ -1,7 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [目录](mu-lu.md)
+* [介绍](README.md)
 * [String]()
    * [String to Integer(NO.8)](note/008/README.md)
    * [Longest Common Prefix(NO.14)](note/014/README.md)
