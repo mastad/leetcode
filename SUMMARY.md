@@ -11,4 +11,6 @@
   * [Palindrome Linked List\(NO.234\)](note/017/234.md)
 * Array
   * [Two Sum\(NO.1\)](note/001/README.md)
+* Graph
+  * [Network Delay Time\(NO.743\)](note/743/README.md)
 
